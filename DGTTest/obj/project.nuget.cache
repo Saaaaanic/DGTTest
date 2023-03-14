@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "BemIFbGRKFz4qZfQTKoR1fYuj8/6nOItXcCx17spCVagywVPSzTgDMkY5yCLpaVGRslu0qYaa2f0jXW5gFUWEQ==",
+  "dgSpecHash": "IOnbPgn8eLPuF2l2Fzg1yrVfUUJmetFt2Y4X4+J6LSNLqyKQCBZwK0zMkxviNR1OA68bI8rZcAndRt5qURW7jA==",
   "success": true,
   "projectFilePath": "C:\\Users\\denis\\RiderProjects\\DGTTest\\DGTTest\\DGTTest.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\denis\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
+    "C:\\Users\\denis\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
+    "C:\\Users\\denis\\.nuget\\packages\\prism.wpf\\8.1.97\\prism.wpf.8.1.97.nupkg.sha512"
+  ],
   "logs": []
 }

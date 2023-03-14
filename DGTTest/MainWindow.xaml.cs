@@ -23,6 +23,8 @@ namespace DGTTest
         public MainWindow()
         {
             InitializeComponent();
+
+            DataContext = new MainPageVM();
         }
     }
 }

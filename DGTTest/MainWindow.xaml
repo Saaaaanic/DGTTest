@@ -6,7 +6,24 @@
         xmlns:local="clr-namespace:DGTTest"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    
+        <Grid d:DataContext="{d:DesignInstance {x:Type local:MainPageVM}}">
+                <ListBox x:Name="ListBox" ItemsSource="{Binding Currencies}">
+                        <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{Binding Name, Mode=OneWay }" Margin="5" />
+                                                <TextBlock Text="{Binding Price, Mode=OneWay}" Margin="5" />
+                                        </StackPanel>
+                                </DataTemplate>
+                        </ListBox.ItemTemplate>
+                </ListBox>
+                <Button 
+                        Content="View Details"
+                        Margin="10"
+                        HorizontalAlignment="Right"
+                        Command="{Binding NavigateToCurrencyDetailsCommand}"
+                        CommandParameter="{Binding ElementName=ListBox, Path=SelectedIndex}" />
+        </Grid>
+        
 </Window>
