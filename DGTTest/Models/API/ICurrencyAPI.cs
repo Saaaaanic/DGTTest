@@ -1,8 +1,10 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 
 namespace DGTTest.Models.Service;
 
 public interface ICurrencyAPI
 {
-    public void GetTopCurrencies(int count);
+    public Task GetTopCurrencies(int count);
 }

@@ -13,7 +13,7 @@
                                 <DataTemplate>
                                         <StackPanel Orientation="Horizontal">
                                                 <TextBlock Text="{Binding Name, Mode=OneWay }" Margin="5" />
-                                                <TextBlock Text="{Binding Price, Mode=OneWay}" Margin="5" />
+                                                <TextBlock Text="{Binding PriceUsd, Mode=OneWay}" Margin="5" />
                                         </StackPanel>
                                 </DataTemplate>
                         </ListBox.ItemTemplate>
