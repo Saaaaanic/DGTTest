@@ -6,24 +6,40 @@
         xmlns:local="clr-namespace:DGTTest"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    
+        
+        <Window.DataContext>
+                <local:MainPageVM/>
+        </Window.DataContext>
+        
         <Grid d:DataContext="{d:DesignInstance {x:Type local:MainPageVM}}">
-                <ListBox x:Name="ListBox" ItemsSource="{Binding Currencies}">
-                        <ListBox.ItemTemplate>
-                                <DataTemplate>
-                                        <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="{Binding Name, Mode=OneWay }" Margin="5" />
-                                                <TextBlock Text="{Binding PriceUsd, Mode=OneWay}" Margin="5" />
-                                        </StackPanel>
-                                </DataTemplate>
-                        </ListBox.ItemTemplate>
-                </ListBox>
-                <Button 
-                        Content="View Details"
-                        Margin="10"
-                        HorizontalAlignment="Right"
-                        Command="{Binding NavigateToCurrencyDetailsCommand}"
-                        CommandParameter="{Binding ElementName=ListBox, Path=SelectedIndex}" />
+                <DockPanel>
+                        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                                <TextBox x:Name="Count" Width="40" Height="20" Margin="5">
+                                        <TextBox.Text>
+                                                <Binding Path="CountOfCurrencies" FallbackValue="10">
+                                                        <Binding.ValidationRules>
+                                                                <DataErrorValidationRule />
+                                                        </Binding.ValidationRules>
+                                                </Binding>
+                                        </TextBox.Text>
+                                </TextBox>
+                                <Button 
+                                        Content="Refresh"
+                                        Margin="10"
+                                        Command="{Binding RefreshList}"/>
+                        </StackPanel>
+                        
+                        <ListBox x:Name="ListBox" ItemsSource="{Binding Currencies}">
+                                <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="{Binding Name, Mode=OneWay }" Margin="5" />
+                                                        <TextBlock Text="{Binding PriceUsd, Mode=OneWay}" Margin="5" />
+                                                </StackPanel>
+                                        </DataTemplate>
+                                </ListBox.ItemTemplate>
+                        </ListBox>
+                </DockPanel>
         </Grid>
         
 </Window>

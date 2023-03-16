@@ -12,13 +12,13 @@ namespace DGTTest.Models.Service;
 public class CurrencyAPI : BindableBase, ICurrencyAPI
 {
     private const string CoinCapAPI = "https://api.coincap.io/v2/";
-    private ObservableCollection<Currency> _currencies;
+    private readonly ObservableCollection<Currency> _currencies = new ObservableCollection<Currency>();
     public readonly ReadOnlyObservableCollection<Currency> PublicCurrencies;
     
     public CurrencyAPI()
     {
         // Called when app started
-        GetTopCurrencies(10).Wait();
+        //GetTopCurrencies(10).Wait();
         PublicCurrencies = new ReadOnlyObservableCollection<Currency>(_currencies);
     }
     
@@ -32,8 +32,12 @@ public class CurrencyAPI : BindableBase, ICurrencyAPI
         using var response = httpClient.GetAsync(url).Result;
         var json = await response.Content.ReadAsStringAsync();
         var currencies = JsonConvert.DeserializeObject<CurrencyContainer>(json);
-        _currencies = currencies.Data;
-        
+        _currencies.Clear();
+        foreach (var currency in currencies.Data)
+        {
+            _currencies.Add(currency);
+        }
+
         // Change the screen data
         RaisePropertyChanged("Currencies");
     }

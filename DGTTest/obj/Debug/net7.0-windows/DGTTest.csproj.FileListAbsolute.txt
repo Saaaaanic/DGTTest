@@ -24,3 +24,4 @@ C:\Users\denis\RiderProjects\DGTTest\DGTTest\bin\Debug\net7.0-windows\Prism.dll
 C:\Users\denis\RiderProjects\DGTTest\DGTTest\bin\Debug\net7.0-windows\Prism.Wpf.dll
 C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\DGTTest.csproj.CopyComplete
 C:\Users\denis\RiderProjects\DGTTest\DGTTest\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
