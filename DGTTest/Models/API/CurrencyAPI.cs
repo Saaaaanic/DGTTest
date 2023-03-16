@@ -18,7 +18,7 @@ public class CurrencyAPI : BindableBase, ICurrencyAPI
     public CurrencyAPI()
     {
         // Called when app started
-        //GetTopCurrencies(10).Wait();
+        GetTopCurrencies(10).Wait();
         PublicCurrencies = new ReadOnlyObservableCollection<Currency>(_currencies);
     }
     

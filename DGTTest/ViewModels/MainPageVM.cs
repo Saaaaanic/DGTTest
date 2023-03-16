@@ -16,15 +16,16 @@ public class MainPageVM : BindableBase, IDataErrorInfo
     public MainPageVM()
     {
         _modelCurrencies.PropertyChanged += (obj, e) => { RaisePropertyChanged(e.PropertyName); };
-        RefreshList = new DelegateCommand(() =>
+        RefreshList = new DelegateCommand<string>((str) =>
         {
-            _modelCurrencies.GetTopCurrencies(CountOfCurrencies).Wait();
+            var num = Int32.Parse(str);
+            if(num > 0 && num <= 100) _modelCurrencies.GetTopCurrencies(CountOfCurrencies).Wait();
         });
     }
 
     public int CountOfCurrencies { get; set; }
     public ReadOnlyObservableCollection<Currency> Currencies => _modelCurrencies.PublicCurrencies;
-    public DelegateCommand RefreshList { get; }
+    public DelegateCommand<string> RefreshList { get; }
     public string Error { get; }
 
     public string this[string columnName]

@@ -26,7 +26,8 @@
                                 <Button 
                                         Content="Refresh"
                                         Margin="10"
-                                        Command="{Binding RefreshList}"/>
+                                        Command="{Binding RefreshList}"
+                                        CommandParameter="{Binding ElementName=Count, Path=Text}"/>
                         </StackPanel>
                         
                         <ListBox x:Name="ListBox" ItemsSource="{Binding Currencies}">
