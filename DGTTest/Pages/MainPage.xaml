@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      
         xmlns:local="clr-namespace:DGTTest"
         mc:Ignorable="d"
         Title="MainPage" Height="450" Width="800">
@@ -15,8 +16,12 @@
                 <DockPanel>
                         
                         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
-                                <TextBlock Text="Search:" Margin="5"></TextBlock>
-                                <TextBox x:Name="Search" Width="200" Height="20" Margin="5"/>
+                                <TextBlock Text="Search:" Margin="10"></TextBlock>
+                                <TextBox x:Name="Search" Width="200" Height="20" Margin="5" />
+                                <Button Content="Search"
+                                        Margin="10"
+                                        Command="{Binding Search}"
+                                        CommandParameter="{Binding ElementName=Search, Path=Text}" />
                         </StackPanel>
                         
                         <StackPanel DockPanel.Dock="Top" HorizontalAlignment="Right" Orientation="Horizontal">
@@ -36,7 +41,7 @@
                                         CommandParameter="{Binding ElementName=Count, Path=Text}"/>
                         </StackPanel>
                         
-                        <ListBox x:Name="ListBox" ItemsSource="{Binding Currencies}" SelectionChanged="ListBox_OnSelectionChanged">
+                        <ListBox x:Name="ListBox" ItemsSource="{Binding Currencies.View}" SelectionChanged="ListBox_OnSelectionChanged">
                                 <ListBox.ItemTemplate>
                                         <DataTemplate>
                                                 <StackPanel Orientation="Horizontal">

@@ -27,4 +27,3 @@ C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\Pages\Info
 C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\Pages\InfoPage.baml
 C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\Pages\MainPage.g.cs
 C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\Pages\MainPage.baml
-C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\App.baml
