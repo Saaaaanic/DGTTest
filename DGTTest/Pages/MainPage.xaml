@@ -46,13 +46,18 @@
                                         CommandParameter="{Binding ElementName=Count, Path=Text}"/>
                         </StackPanel>
                         
+                        
                         <ListBox x:Name="ListBox" ItemsSource="{Binding Currencies.View}" MouseDoubleClick="ListBox_OnMouseDoubleClick">
                                 <ListBox.ItemTemplate>
                                         <DataTemplate>
-                                                <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="{Binding Name, Mode=OneWay }" Margin="5" />
-                                                        <TextBlock Text="{Binding PriceUsd, Mode=OneWay}" Margin="5" />
-                                                </StackPanel>
+                                                <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="150" />
+                                                                <ColumnDefinition Width="Auto" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <TextBlock Grid.Column="0" Text="{Binding Name, Mode=OneWay }" Margin="5" />
+                                                        <TextBlock Grid.Column="1" Text="{Binding PriceUsd, Mode=OneWay}" Margin="5" />
+                                                </Grid>
                                         </DataTemplate>
                                 </ListBox.ItemTemplate>
                         </ListBox>

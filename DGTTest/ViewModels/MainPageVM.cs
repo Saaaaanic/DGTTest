@@ -20,6 +20,8 @@ public class MainPageVM : BindableBase, IDataErrorInfo
     public MainPageVM()
     {
         _currencies.Source = _modelCurrencies.PublicCurrencies;
+        
+        // Adding logic to events
         RefreshList = new DelegateCommand<string>((str) =>
         {
             var num = Int32.Parse(str);
@@ -41,6 +43,8 @@ public class MainPageVM : BindableBase, IDataErrorInfo
     }
 
     public int CountOfCurrencies { get; set; }
+    
+    // Collection for ListBox
     public CollectionViewSource Currencies => _currencies;
     public DelegateCommand<string> RefreshList { get; }
     public DelegateCommand<string> Search { get; }

@@ -12,7 +12,7 @@ public class Currency
     public double PriceUsd { get; set; }
     public double VolumeUsd24Hr { get; set; }
     public double ChangePercent24Hr { get; set; }
-    public List<Market> Markets { get; set; }
+    public ObservableCollection<Market> Markets { get; set; }
 }
 
 // Contains data from JSON
