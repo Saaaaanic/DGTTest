@@ -4,11 +4,9 @@ C:\Users\denis\RiderProjects\DGTTest\DGTTest\bin\Debug\net7.0-windows\DGTTest.ru
 C:\Users\denis\RiderProjects\DGTTest\DGTTest\bin\Debug\net7.0-windows\DGTTest.dll
 C:\Users\denis\RiderProjects\DGTTest\DGTTest\bin\Debug\net7.0-windows\DGTTest.pdb
 C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\DGTTest.csproj.AssemblyReference.cache
-C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\MainWindow.g.cs
 C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\App.g.cs
 C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\DGTTest_MarkupCompile.cache
 C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\DGTTest_MarkupCompile.lref
-C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\MainWindow.baml
 C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\DGTTest.g.resources
 C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\DGTTest.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\DGTTest.AssemblyInfoInputs.cache
@@ -25,3 +23,8 @@ C:\Users\denis\RiderProjects\DGTTest\DGTTest\bin\Debug\net7.0-windows\Prism.Wpf.
 C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\DGTTest.csproj.CopyComplete
 C:\Users\denis\RiderProjects\DGTTest\DGTTest\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
 C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\Pages\InfoPage.g.cs
+C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\Pages\InfoPage.baml
+C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\Pages\MainPage.g.cs
+C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\Pages\MainPage.baml
+C:\Users\denis\RiderProjects\DGTTest\DGTTest\obj\Debug\net7.0-windows\App.baml

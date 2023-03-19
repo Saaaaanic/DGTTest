@@ -37,9 +37,6 @@ public class CurrencyAPI : BindableBase, ICurrencyAPI
         {
             _currencies.Add(currency);
         }
-
-        // Change the screen data
-        RaisePropertyChanged("Currencies");
     }
     
 }

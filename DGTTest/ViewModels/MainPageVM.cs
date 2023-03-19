@@ -2,6 +2,8 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Navigation;
 using DGTTest.Models;
 using DGTTest.Models.Service;
 using Prism.Commands;
@@ -26,8 +28,9 @@ public class MainPageVM : BindableBase, IDataErrorInfo
     public int CountOfCurrencies { get; set; }
     public ReadOnlyObservableCollection<Currency> Currencies => _modelCurrencies.PublicCurrencies;
     public DelegateCommand<string> RefreshList { get; }
-    public string Error { get; }
 
+    // Implementation of IDataErrorInfo interface
+    public string Error { get; }
     public string this[string columnName]
     {
         get

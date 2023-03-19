@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\denis\RiderProjects\DGTTest\DGTTest\App.xaml
-11407045341
+2-324315803
 
-81258753494
+10-468027966
 2021590131005
-MainWindow.xaml;
+Pages\InfoPage.xaml;Pages\MainPage.xaml;
 
 False
 
