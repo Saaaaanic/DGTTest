@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       
         xmlns:local="clr-namespace:DGTTest"
+        xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
         Title="MainPage" Height="450" Width="800">
         
@@ -17,11 +18,15 @@
                         
                         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
                                 <TextBlock Text="Search:" Margin="10"></TextBlock>
-                                <TextBox x:Name="Search" Width="200" Height="20" Margin="5" />
-                                <Button Content="Search"
-                                        Margin="10"
-                                        Command="{Binding Search}"
-                                        CommandParameter="{Binding ElementName=Search, Path=Text}" />
+                                <TextBox x:Name="Search" Width="200" Height="20" Margin="5" >
+                                        <b:Interaction.Triggers>
+                                                <b:EventTrigger EventName="TextChanged">          
+                                                        <b:InvokeCommandAction
+                                                                Command="{Binding Search}" 
+                                                                CommandParameter="{Binding ElementName=Search, Path=Text}"/>
+                                                </b:EventTrigger>
+                                        </b:Interaction.Triggers>
+                                </TextBox>
                         </StackPanel>
                         
                         <StackPanel DockPanel.Dock="Top" HorizontalAlignment="Right" Orientation="Horizontal">
@@ -41,7 +46,7 @@
                                         CommandParameter="{Binding ElementName=Count, Path=Text}"/>
                         </StackPanel>
                         
-                        <ListBox x:Name="ListBox" ItemsSource="{Binding Currencies.View}" SelectionChanged="ListBox_OnSelectionChanged">
+                        <ListBox x:Name="ListBox" ItemsSource="{Binding Currencies.View}" MouseDoubleClick="ListBox_OnMouseDoubleClick">
                                 <ListBox.ItemTemplate>
                                         <DataTemplate>
                                                 <StackPanel Orientation="Horizontal">

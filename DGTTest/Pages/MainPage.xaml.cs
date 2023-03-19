@@ -27,12 +27,12 @@ namespace DGTTest
             InitializeComponent();
         }
         
-        private void ListBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ListBox_OnMouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            if (e.AddedItems.Count > 0)
+            if (ListBox.SelectedItem != null)
             {
                 NavigationService?.Navigate(
-                    new InfoPage() { DataContext = new InfoPageVM(e.AddedItems[0] as Currency) });
+                    new InfoPage() { DataContext = new InfoPageVM(ListBox.SelectedItem as Currency) });
             }
         }
     }

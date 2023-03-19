@@ -33,8 +33,7 @@ public class MainPageVM : BindableBase, IDataErrorInfo
             }
             else
             {
-                Currencies.View.Filter = item => item is Currency currency && currency.Name.StartsWith(str, StringComparison.InvariantCultureIgnoreCase);
-                Currencies.View.Refresh();
+                Currencies.View.Filter = item => item is Currency currency && currency.Name.Contains(str, StringComparison.InvariantCultureIgnoreCase);
             }
         });
     }
