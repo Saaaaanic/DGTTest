@@ -39,7 +39,7 @@ public class CurrencyAPI : BindableBase, ICurrencyAPI
     // Method to get markets where u can buy this currency
     public async Task GetMarkets(Currency currency)
     {
-        var url = $"markets?baseSymbol=BTC";
+        var url = $"markets?baseSymbol={currency.Symbol}";
         string json = await CallApi(url, "https://api.coincap.io/v2/");
         var settings = new JsonSerializerSettings
         {
